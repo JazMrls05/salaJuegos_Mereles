@@ -1,0 +1,110 @@
+.div-fondo {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #e73200, #ed5111, #f26922, #f77e34, #fc9246);
+    font-family: 'Segoe UI', sans-serif;
+    gap: 20px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#div-carta-boton{
+    height: 70%;
+    width:50%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 220px;
+    background-color: rgb(1, 85, 1);
+    border-radius: 30px;
+}
+
+.botones-verticales {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.botones-verticales button {
+    height: 80px;
+    width: 200px;
+}
+
+#div-carta-boton button {
+    height: 80px;
+}
+
+#carta {
+    display: flex;
+    align-items: center;
+    background-color: #fbebd8;
+    height: 500px;
+    width:350px;
+    justify-content:center;
+    border-radius: 20px;
+    border: 7px dashed #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+#carta-reverso{
+    display: flex;
+    align-items: center;
+    background-image:url(../../../../assets/reverso-carta.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    height: 500px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+h2{
+    font-size: x-large;
+}
+.numero-carta {
+    font-size: 10vw;
+    font-weight: bold;
+    color: #bc0000;
+}
+
+.btn-juego{
+    height: 50px;
+    width: 200px;
+    font-size: larger;
+}
+
+.opciones {
+    display: flex;
+    gap: 30px;
+}
+
+.mensaje {
+    font-size: x-large;
+    min-height: 40px;
+    text-align: center;
+}
+
+.final {
+    font-weight: bold;
+    color: red;
+}
+
+#div-puntaje {
+    background-color: rgb(1, 85, 1);
+    border-radius: 25px;
+    width:300px;
+    margin-top: 10px;
+    font-size: 1vw;
+    color: #fff2d5;
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+#titulo-carta{
+    font-size: 3vw;
+    margin-top: 0.2px;
+}

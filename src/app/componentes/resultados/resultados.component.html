@@ -1,0 +1,28 @@
+<table mat-table [dataSource]= "puntajes" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="juego">
+        <th mat-header-cell *matHeaderCellDef> Juego </th>
+        <td mat-cell *matCellDef="let p"> {{p.juego}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="alias">
+        <th mat-header-cell *matHeaderCellDef> Jugador </th>
+        <td mat-cell *matCellDef="let p"> {{p.alias}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="puntaje">
+        <th mat-header-cell *matHeaderCellDef> Puntaje </th>
+        <td mat-cell *matCellDef="let p"> {{p.puntaje}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let row"> {{row.fecha.toDate() | date:'short'}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['alias', 'juego', 'puntaje', 'fecha']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['alias', 'juego', 'puntaje', 'fecha']"
+    [style.backgroundColor] ="obtenerColor(row.juego)"></tr>
+        
+</table>
+

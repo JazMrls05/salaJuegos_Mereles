@@ -1,0 +1,38 @@
+.div-fondo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100%;
+    background-image: linear-gradient(to bottom, #e73200, #ed5111, #f26922, #f77e34, #fc9246);
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 20px;
+    margin: 20px 0;
+}
+
+.celda {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+}
+
+.mensaje-final {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#btn-volver{
+    width:25%;
+    font-size: large;
+    height: 50px;
+}
+
+#btn-reiniciar{
+    width:50%;
+    font-size: large;
+    height: 70px;
+}

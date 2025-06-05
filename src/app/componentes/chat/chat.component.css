@@ -1,0 +1,38 @@
+#chat-card {
+    display: flex;
+    flex-direction: column;
+    width: 1500px;
+    height: 700px;
+    border-radius: 30px;
+    background-color: rgb(246, 228, 176);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#div-titulo {
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+}
+
+#chat-mensajes {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(251, 247, 232);
+    min-height: 0; /* Muy importante para que funcione en flexbox con overflow */
+}
+
+#chat-input {
+    flex: 0 0 auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#input-mensajes {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+

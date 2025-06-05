@@ -1,0 +1,68 @@
+#div-fondo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #e73200, #ed5111, #f26922, #f77e34, #fc9246);
+}
+
+#card-vista{
+    width: 40vw;
+    height: 53vh;
+    background-color: black;
+    margin-top: 15px;
+    mat-card-content{
+        display:flex;
+        justify-content: center;
+    }
+}
+
+#card-puntaje{
+    width: 15%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mat-card-content{
+        font-size: large;
+    }
+}
+
+.btn-opciones{
+    margin-top: 20px;
+    height:80px;
+    width:250px;
+    border-radius: 50px;
+    border:none;
+    font-size: x-large;
+    font-family: 'GrilledCheese BTN Cn';
+}
+
+#div-botones{
+    display:flex;
+    flex-wrap: wrap;
+    gap:25px;
+}
+
+#btn-volver{
+    margin-top: 20px;
+    width: 55%;
+    height:60px;
+    font-size: large;
+}
+
+h1{
+    font-family: 'GrilledCheese BTN Cn';
+    font-size: 50px;
+    color:rgb(252, 240, 70) ;
+}
+
+.correcta {
+    background-color: #4caf50 !important;
+    color: white;
+}
+.incorrecta {
+    background-color: #f44336 !important;
+    color: white;
+}

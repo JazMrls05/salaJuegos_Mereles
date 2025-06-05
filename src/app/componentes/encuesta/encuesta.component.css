@@ -1,0 +1,20 @@
+#div-titulo {
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+}
+
+#card-encuesta{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 700px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, #3a4ed4, #0075eb, #0095f2, #00b1ef, #00cae8, #25d5df, #4ddfd3, #72e7c5, #79e5a5, #8fe07e, #acd855, #cdcd27);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+mat-form-field{
+    width:90%;
+}

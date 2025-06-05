@@ -1,0 +1,23 @@
+<div class="div-fondo">
+    
+    <h1>🧠 ¡Tocá los números en orden!</h1>
+    <h2>⏱ Tiempo: {{ tiempo }} segundos</h2>
+
+    <div class="grilla">
+    <button 
+        *ngFor="let numero of numeros"
+        mat-raised-button
+        color="primary"
+        class="celda"
+        [disabled]="numero < siguienteNumero"
+        (click)="seleccionarNumero(numero)">
+        {{ numero }}
+    </button>
+    </div>
+    <button mat-raised-button id="btn-volver" routerLink="/home">Volver al Home 🏠</button>
+    <div *ngIf="juegoTerminado" class="mensaje-final">
+        🎉 ¡Felicitaciones! Completaste la secuencia en <strong>{{ tiempo }}</strong> segundos.
+        <br><br>
+        <button mat-raised-button (click)="reiniciar()" id="btn-reiniciar">Volver a jugar ↺</button>
+    </div>
+</div>

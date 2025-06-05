@@ -1,0 +1,67 @@
+<div id="div-home">
+    <mat-toolbar>
+        <ng-container *ngIf="logueado; else mostrarLogin">
+
+        <button class="botones-izq" routerLink='/quien-soy' mat-fab extended>
+            <mat-icon>favorite</mat-icon>
+            ¡Sobre mi!
+        </button>
+        &nbsp;
+        <button class="botones-izq" mat-fab extended (click)="activarChat()">
+            <mat-icon>chat</mat-icon>
+            Chat grupal
+        </button>
+        &nbsp;
+        <button class="botones-izq" mat-fab extended (click)="activarResultados()">
+            <mat-icon>leaderboard</mat-icon>
+            Resultados
+        </button>
+        &nbsp;
+
+
+        <span id="titulo-toolbar"> ★ ☆ S A L A · D E · J U E G O S ☆ ★ </span>
+
+        <button class="botones-izq" mat-fab extended (click)="activarEncuesta()">
+            <mat-icon>rate_review</mat-icon>
+            Encuesta
+        </button>
+        &nbsp;&nbsp;
+        <span class="bienvenida">Bienvenido, {{ usuarioActual }}!</span>
+
+        <button routerLink='/login' mat-icon-button color="warn" aria-label="Cerrar-Sesión">
+            <mat-icon>logout</mat-icon>
+        </button>
+        </ng-container>
+
+        <ng-template #mostrarLogin>
+        <button class="botones-izq" routerLink='/quien-soy' mat-fab extended>
+            <mat-icon>favorite</mat-icon>
+            ¡Sobre mi!
+        </button>
+        
+        <span id="titulo-toolbar"> ★ ☆ S A L A · D E · J U E G O S ☆ ★ </span>
+
+        <button routerLink='/login' mat-raised-button color="primary">Iniciar Sesión</button>
+        </ng-template>
+    </mat-toolbar>
+
+    <div *ngIf="!chatActivo && !resultadosActivo && !encuestaActiva" id="div-juegos">
+        <button class="botones-juegos" (click)="jugar('Ahorcado')" mat-flat-button>E L · A H O R C A D O</button>
+        <button class="botones-juegos" (click)="jugar('Mayor o menor')" mat-flat-button>¿ M A Y O R · O · M E N O R ?</button>
+        <button class="botones-juegos" (click)="jugar('Preguntados')" mat-flat-button>P R E G U N T A D O S</button>
+        <button class="botones-juegos" (click)="jugar('Carrera en orden')" mat-flat-button> C A R R E R A · E N · O R D E N</button>
+    </div>
+
+    <div *ngIf="chatActivo && logueado" id="div-chat">
+        <app-chat></app-chat>
+        <button mat-flat-button id="btn-volver-juegos" color="accent" (click)="mostrarJuegos()">Volver</button>
+    </div>
+        <div *ngIf="resultadosActivo && logueado" id="div-resultados">
+        <app-resultados></app-resultados>
+        <button mat-flat-button id="btn-volver-juegos" color="accent" (click)="mostrarJuegos()">Volver</button>
+    </div>
+        <div *ngIf="encuestaActiva && logueado" id="div-encuesta">
+        <app-encuesta></app-encuesta>
+        <button mat-flat-button id="btn-volver-juegos" color="accent" (click)="mostrarJuegos()">Volver</button>
+    </div>
+</div>

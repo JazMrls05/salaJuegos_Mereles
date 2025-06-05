@@ -1,0 +1,24 @@
+<div style="background-color: rgb(47, 153, 29);" id="div-centro">
+    <mat-card id="card-registro" appearance="outlined">
+        <mat-card-content>
+            <form>
+                <h2 style="color: rgb(252, 219, 71);">¡Creá tu cuenta y desbloqueá la diversión!</h2>
+                <mat-form-field class="input-registro">
+                    <mat-label>Ingrese un alias</mat-label>
+                    <input matInput placeholder="ej: hola_12" [(ngModel)]="alias" [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+                <mat-form-field class="input-registro">
+                    <mat-label>Ingrese su e-mail</mat-label>
+                    <input matInput placeholder="blabla@bla.com" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+                <mat-form-field class="input-registro">
+                    <mat-label>Ingrese una clave</mat-label>
+                    <input matInput placeholder="***" [(ngModel)]="clave" [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+                <p hidden id="p-error-registro" style="color:firebrick; background-color: rgb(128, 175, 251);"></p>
+                <button (click)="registrarFirebase()" id="boton-registrar" mat-raised-button>Registrarse</button>&nbsp;
+                <button routerLink="/login" mat-raised-button>Volver</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

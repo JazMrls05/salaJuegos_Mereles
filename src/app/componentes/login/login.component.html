@@ -1,0 +1,47 @@
+<div style="background-image: linear-gradient(to bottom, #0d32e0, #183ce2, #2146e5, #2a4ee6, #3357e8);" id="div-centro">
+    <mat-card id="card-login" appearance="outlined">
+    <mat-card-content>
+        <form>
+            <h1 style="color: rgb(252, 219, 71);">¡Hola de nuevo!</h1>
+            <mat-form-field class="input-login">
+                <mat-label>Ingrese su e-mail</mat-label>
+                <input matInput placeholder="blabla@bla.com" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <mat-form-field class="input-login">
+                <mat-label>Ingrese su clave</mat-label>
+                <input
+                    matInput
+                    [type]="ocultarClave ? 'password' : 'text'"
+                    placeholder="***"
+                    [(ngModel)]="clave"
+                    [ngModelOptions]="{standalone: true}"
+                />
+                <button
+                    mat-icon-button
+                    matSuffix
+                    (click)="ocultarClave = !ocultarClave"
+                    [attr.aria-label]="'Toggle password visibility'"
+                    [attr.aria-pressed]="!ocultarClave"
+                >
+                    <mat-icon>{{ ocultarClave ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+            </mat-form-field>
+            <p hidden id="p-error-login" style="color:firebrick">Usuario o clave incorrectos</p>
+
+            <div id="div-botones-login">
+                <button (click)="validarDatos()" class="botones-login" id="boton-aceptar-login" mat-raised-button>Juguemos!</button>
+                <button (click)="salirAlHome()" class="botones-login"mat-raised-button>Volver al Home</button>
+            </div>
+            
+            <div id="botones-autocompletar">
+                <button (click)="autocompletarAdmin()" class="botones-login" mat-raised-button>Administrador</button>
+                <button (click)="autocompletarJaz()" class="botones-login" mat-raised-button>Usuario Jaz</button>
+            </div>
+            <div id="div-registro">
+                <a routerLink="/registro" >¿Sos nuevo por acá? REGISTRATE</a>
+            </div>
+            
+        </form>
+    </mat-card-content>
+    </mat-card>
+

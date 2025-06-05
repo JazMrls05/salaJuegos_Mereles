@@ -1,0 +1,87 @@
+#div-home{
+    background-image: linear-gradient(to bottom, #e73200, #ed5111, #f26922, #f77e34, #fc9246);
+    height: 100vh;
+}
+
+.botones-izq{
+    height: 40px;
+}
+
+mat-toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(252, 197, 0);
+    font-family: 'GrilledCheese BTN Cn';
+    font-size: xx-large;
+    color:rgb(51, 87, 232);
+}
+
+#titulo-toolbar {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+#div-juegos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height:90vh;
+}
+
+@keyframes rebote {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.botones-juegos{
+    margin-left: 40px;
+    height: 350px;
+    width: 700px;
+    font-size:xx-large;
+    font-family: 'GrilledCheese BTN Cn';
+    transition: box-shadow 0.3s ease;
+}
+
+
+.botones-juegos:hover {
+    outline: none;
+    box-shadow: 0 0 8px 8px rgb(155, 202, 255);
+    animation: rebote 0.4s ease;
+}
+
+.bienvenida{
+    margin-left: auto;
+    margin-right: 10px;
+    font-weight: bold;
+    color: rgb(51, 87, 232); /* o el color que combine con tu toolbar */
+}
+
+#div-chat{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:90vh;
+}
+#div-resultados{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:90vh;
+}
+#div-encuesta{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:90vh;
+    width:100%;
+}
+
+#btn-volver-juegos{
+    height: 100px;
+    margin-left: 40px;
+    font-size: x-large;
+}
